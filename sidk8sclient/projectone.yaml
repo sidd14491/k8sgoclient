@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: projectone
+  name: projectone
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: projectone
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: projectone
+    spec:
+      containers:
+      - image: sidd14491/projectone:0.1.3
+        name: projectone
+        resources: {}
+status: {}
